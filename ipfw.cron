@@ -1,0 +1,7 @@
+#!/bin/bash
+#
+
+DIR=$(cd `dirname $0`;echo $PWD)
+cat > /etc/cron.d/ipfw << EOF
+20 * * * * root $DIR/ipfw.sh
+EOF
